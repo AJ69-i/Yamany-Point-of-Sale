@@ -1,0 +1,25 @@
+<table class="table table-striped mt-4">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of searchedProducts; let i = index; trackBy: trackById">
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.title}}</td>
+      <td>{{product.price}} $</td>
+      <td class="d-flex flex-md-row flex-column align-items-center justify-conent-sm-center">
+        <button type="button" class="btn btn-primary me-md-1 me-0 mb-md-0 mb-3" (click)="minus(i)">-</button>
+        <input class="form-control" type="text" placeholder="Qty" [value]="product.qty"
+          aria-label="default input example" min="1">
+        <button type="button" class="btn btn-primary ms-md-1 ms-0 mt-md-0 mt-3" (click)="add(i)">+</button>
+      </td>
+      <td>{{product?.total_price}} $</td>
+    </tr>
+  </tbody>
+</table>

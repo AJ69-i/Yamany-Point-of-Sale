@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <app-search (searchedItem)="receiveSearchedItem($event)"></app-search>
+
+  <app-data-table [searchedProduct]="searchedProduct" (sub_total)="receiveSubTotal($event)"></app-data-table>
+
+  <app-summary-table [subTotal]="subTotal"></app-summary-table>
+</div>
+

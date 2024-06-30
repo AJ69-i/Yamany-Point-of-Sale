@@ -1,0 +1,20 @@
+<table class="table mt-5 mb-5">
+  <thead>
+    <tr>
+      <th scope="col">Sub Total</th>
+      <th scope="col">Tax</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{subTotal}} $</td>
+      <td>14%</td>
+      <td class="d-flex flex-md-row flex-column align-items-center justify-conent-sm-center">
+        <input class="form-control" type="text" placeholder="discount" aria-label="default input example" [(ngModel)]="discountValue" (keyup)="getDiscount()">
+      </td>
+      <td>{{total}} $</td>
+    </tr>
+  </tbody>
+</table>
